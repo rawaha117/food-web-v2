@@ -1,0 +1,329 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior:smooth;
+}
+
+#utility-text{
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase; 
+}
+
+nav{
+    background-color: #000;
+margin-top:20px;
+width:100%;
+max-height:80px;
+position: fixed;
+z-index:15;
+border-bottom: 2px solid #dddddd4f;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+#navbtn{
+    margin-right:100px;
+    display:flex;
+}
+#navbtn a{
+margin: 0px 30px;
+text-decoration: none;
+}
+
+#navbar img{
+    margin-left: 100px;
+    width:150px;
+    filter: invert(100);
+}
+
+#navbtn h4{
+    font-family:'Times New Roman', Times, serif;
+text-transform: uppercase;
+color:#ddd;
+overflow: hidden;
+font-weight: 600;
+}
+#bar{
+color:#ddd;
+overflow: hidden;
+display: none;
+font-size: 1.3em;
+position:absolute;
+right:20px;
+top: 25px;
+}
+
+input[type=checkbox]{
+    z-index: -1;
+    opacity:0;
+}
+
+
+
+body video{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: 1;
+}
+
+body::before{
+    content: "";
+    width:100%;
+    height:100%;
+    background-color: rgba(0, 0, 0, 0.322);
+    position: fixed;
+    z-index:2;
+}
+
+
+
+/* start of main section */
+#main{
+position: relative;
+    z-index: 10;
+}
+#page1{
+    height:100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height:60px;
+}
+#page1 h1{
+    font-size: 2.2em;
+    position: relative;
+color: burlywood;
+}
+#page1 h1::before{
+    content: "welcome to coffe shop";
+    position: absolute;
+    top:-1px;
+    right:-2px;
+    color: #fff;
+}
+
+#page1 h3{
+    font-size:1.5em;
+    color: #fff;
+}
+#page1 button{
+    width:150px;
+    height:40px;
+    margin-top:8px;
+    font-size:15px;
+    position: relative;
+    background: transparent;
+    color:#fff;
+    font-weight: 600;
+    border:2px solid #fff;
+    border-radius:10px;
+}
+#page1 button:hover{
+    border: none;
+    color: rgb(66, 66, 66);
+}
+
+span{
+    width:0;
+    height:100%;
+    background-color:rgb(0, 255, 170);
+    position: absolute;
+    top:0;
+    left:0;
+    border-radius:10px;
+    transition:linear 0.40s;
+    z-index:-10;
+   
+}
+#page1 button:hover span{
+width:100%;
+box-shadow: 0px 0px 2px #fff,0px 0px 4px #fff,0px 0px 150px #fff;
+}
+
+/* cursor */
+#cursor{
+    width:20px;
+    height:20px;
+    background-color: #ffe08b;
+    border-radius: 50%;
+    z-index:15;
+    position:fixed;
+    
+}
+/* #cursor-blur{
+    width:200px;
+    height:200px;
+    background-color: #ffe08b;
+    z-index: 15;
+    position:fixed;
+} */
+#cursor::before{
+    content: "";
+    width:100px;
+    height:100px;
+    background-color: #f8e8ba;
+    border-radius: 50%;
+    position:absolute;
+    filter: blur(120px);
+    top:0;
+    left: 0;
+    z-index: 15;
+    box-shadow:10px 10px 5px 5px #fff;
+}
+
+/* page2 */
+#page2{
+    width:100%;
+    margin:30px 0px;
+    overflow: hidden;
+    
+}
+#page2 h1{
+    text-align: center;
+    padding:20px 0px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.527);
+}
+
+#menu{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#item{
+    width:280px;
+    height:420px;
+    margin:30px 30px;
+    background-color:rgba(59, 26, 26, 0.952);
+    border-radius: 15px;
+}
+
+#item h2{
+color: #ddd;
+font-size: 1.4em;
+font-weight:600;
+text-transform: uppercase;
+text-align: center;
+padding-top:20px;
+}
+#item p{
+    color: #ddd;
+    text-transform:capitalize;
+    font-weight:500;
+    font-size: 1.1em;
+    font-family:Arial, Helvetica, sans-serif;
+    margin:0px 20px;
+    margin-bottom:10px;
+    text-align: center;
+}
+#item button{
+    width:100px;
+    height:30px;
+    margin-top:10px;
+    font-size:17px;
+    font-weight:600;
+    color: #fff;
+    background: transparent;
+    border:2px solid #fff;
+    border-radius: 10px;
+    position: relative;
+    z-index:10;
+}
+
+#item span{
+    width:0;
+    height:100%;
+    background-color:rgb(0, 255, 170);
+    box-shadow: 0px 0px 2px #fff,0px 0px 4px #fff,0px 0px 40px #fff;
+    position:absolute;
+    top: 0;
+    left:0;
+    z-index:-1;
+}
+#item button:hover span{
+    width: 100%;
+}
+
+#item button:hover{
+    border: none;
+    color: rgb(66, 66, 66);
+}
+
+#item img{
+    width:230px;
+    height:200px;
+    margin-top:30px;
+    display:block;
+    margin:20px auto;
+    border-radius: 10px;
+}
+
+
+/* page3 */
+#page3{
+    position: relative;
+    width:100%;
+    height:300vh;
+    background-color: rgba(29, 27, 27, 0.404);
+    z-index: 10;
+}
+
+
+
+
+/* media for max width 950px */
+@media only screen and (max-width:950px){
+    #navbtn{
+        display: none;
+    }
+   #bar{
+    display: block;
+   }
+   nav{
+    padding: 0px;
+   }
+  #navbar input[type=checkbox]:checked ~ #navbtn{
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  top:70px;
+  flex-direction: column;
+  margin:10px 0px;
+  padding: 30px 0px;
+  gap: 30px;
+  border-radius:0px 0px 0px 20px ;
+  background-color: #000;
+}
+
+#navbar img{
+    margin-left: 0px;
+}
+
+}
+
+/* media for max width 510px */
+@media only screen and (max-width:510px){
+   #page1 h1{
+    font-size: 1.4em;
+   }
+   #page1 h3{
+    font-size: 1.1em;
+   }
+
+   /* page2 */
+   #page2 h1{
+    text-align: center;
+    padding:30px 0px;
+    color: #fff;
+    font-size: 1.4em;
+}
+
+}
